@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -37,7 +38,7 @@ public class FragmentLogin extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate (R.layout.login_frag, container,false);
-
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Sign in ");
         name=view.findViewById(R.id.editName);
         password=view.findViewById(R.id.editPassword);
 
@@ -54,13 +55,15 @@ public class FragmentLogin extends Fragment {
                 upass=sharedPreferences.getString("pass",null);
 
                 if(username.equals(uname)&& pass.equals(upass)){
-//                    Toast.makeText(getContext(),"Login",Toast.LENGTH_SHORT).show();
-                    fragment= new MailListFragment();
+//                  Toast.makeText(getContext(),"Login",Toast.LENGTH_SHORT).show();
+                    fragment= new FragmentList();
                     fragmentManager=getFragmentManager();
-                    fragmentTransaction=getFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.fragmentContainer,fragment);
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
+                    fragmentManager
+                            .beginTransaction()
+                            .replace(R.id.fragmentContainer, FragmentList.newInstance())
+                            .addToBackStack("second")
+                            .commit();
+
 
                 }else{
                     Toast.makeText(getContext(),"Error",Toast.LENGTH_SHORT).show();;
@@ -82,6 +85,7 @@ public class FragmentLogin extends Fragment {
 
         return view;
     }
+
     public void setCallbackFragment(CallbackFragment callbackFragment){
         this.callbackFragment = callbackFragment;
     }

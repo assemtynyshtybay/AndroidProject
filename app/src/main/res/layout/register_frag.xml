@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/back">
+    android:background="@drawable/page">
     <LinearLayout
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -14,35 +14,44 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="Sign up"
             android:textColor="#fff"
             android:textSize="20dp"
             android:textStyle="bold"
             android:padding="10dp"/>
-
         <EditText
             android:id="@+id/newName"
             android:layout_width="278dp"
             android:layout_height="57dp"
             android:ems="10"
             android:padding="5dp"
-            android:inputType="textPersonName"
-            android:hint="username" />
+            android:inputType="textEmailAddress"
+            android:hint="Name"
+            />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="278dp"
+            android:layout_height="57dp"
+            android:ems="10"
+            android:padding="5dp"
+            android:inputType="textEmailAddress"
+            android:hint="E-mail"
+            />
         <EditText
             android:id="@+id/newPassword"
             android:layout_width="316dp"
             android:layout_height="62dp"
             android:ems="10"
             android:padding="5dp"
-            android:inputType="textPersonName"
-            android:hint="password" />
+            android:inputType="textPassword"
+            android:hint="Password" />
 
 
         <Button
             android:id="@+id/btnregister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/btnlog"
+            android:background="@drawable/btn_log"
 
             android:text="Register" />
 

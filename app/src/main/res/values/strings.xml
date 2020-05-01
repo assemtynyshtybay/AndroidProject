@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Loginer</string>
+    <string name="app_name">QuotesApp</string>
+    <string name="quotes">Quotes</string>
+    <string name="Favorites">Favorites</string>
+    <string name="new_quote">New quote</string>
+    <string name="share">Share</string>
+    <string name="meaning">Add</string>
 </resources>

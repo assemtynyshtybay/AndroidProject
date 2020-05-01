@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page">
+    <TextView
+        android:id="@+id/quoteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/quoteAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/mean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/editMean"
+        android:layout_width="278dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:padding="5dp"
+        android:inputType="text"
+        android:hint="Add meaning here!" />
+    <Button
+        android:id="@+id/addMean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meaning"/>
+</LinearLayout>

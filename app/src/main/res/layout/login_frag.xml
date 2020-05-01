@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/back"
+    android:background="@drawable/page"
     >
 
     <LinearLayout
@@ -16,10 +16,10 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="agendize"
+            android:text="Welcome to QuotesApp!"
             android:gravity="center"
-            android:textColor="#fff"
-            android:textSize="50dp"
+            android:textColor="@color/colorOrange"
+            android:textSize="40dp"
             android:textStyle="bold"
             android:padding="10dp"/>
 
@@ -29,32 +29,42 @@
             android:layout_height="57dp"
             android:ems="10"
             android:padding="5dp"
-            android:inputType="textPersonName"
-            android:hint="username" />
+            android:inputType="textEmailAddress"
+            android:hint="Name" />
         <EditText
             android:id="@+id/editPassword"
-            android:layout_width="316dp"
-            android:layout_height="62dp"
+            android:layout_width="278dp"
+            android:layout_height="57dp"
             android:ems="10"
             android:padding="5dp"
-            android:inputType="textPersonName"
-            android:hint="password" />
-
+            android:inputType="textPassword"
+            android:hint="Password" />
 
         <Button
             android:id="@+id/btnlogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_log"
             android:onClick="toMail"
-            android:text="Login" />
-
+            android:background="@drawable/rounded_drawable"
+            android:text="Login"
+            android:textColor="#fff"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If you are our first user, please"
+            android:gravity="center"
+            android:textColor="@color/colorOrange"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:padding="10dp"/>
         <Button
             android:id="@+id/btnsignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_log"
             android:layout_marginTop="10dp"
-            android:text="Sign up" />
+            android:text="SIGN UP" />
 
     </LinearLayout>
 
